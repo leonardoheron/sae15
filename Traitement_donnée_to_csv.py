@@ -120,10 +120,14 @@ def camambert(tab_ip,tab_occu):
     plt.show()
 
 def website():
-    with open("test.html","w") as f:
+    with open("page_defaillance.html","w") as f:
         f.write(markdown.markdown('''#<center>Diagramme d'occurences des IPs</center>
 <center>![diagramme](result.png)</center>
-##<center>Défaillance ICMP</center>
+<center>Vu le nombre d'pparition de BP-Linux8, on pourrait supposer que c'est une **attaque DDoS**</center>\n
+<center>Créer des connexions semi-ouvertes s’accomplit facilement avec l'IP spoofing.<br>Le système de l'agresseur envoie des messages SYN à la machine victime ; ceux-ci semblent être légitimes, mais font référence à un système client incapable de répondre au message SYN-ACK.<br>Cela signifie que le message ACK final ne sera jamais envoyé au serveur victime.</center>
+
+<center>alement il y a un délai d'attente associé à une connexion entrante, les semi-connexions ouvertes vont expirer et le serveur victime pourra gérer l’attaque.<br>Toutefois, le système agresseur peut simplement continuer à envoyer des paquets IP<br>falsifiés demandant de nouvelles connexions, plus rapides que le serveur victime.</center>
+##<center>Défaillance ICMP<\center>
 <center>![icmp](icmp.png)</center>
 '''))
     f.close()
